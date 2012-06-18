@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>The Musical Beat</title>
+    <link rel="stylesheet" type="text/css" href="homeStyle.css">
+    <style type="text/css">
+        body{
+        	background-color: black;
+            color: white;
+        }
+        color: #FF0080;
+        A:link {text-decoration:none;color:#FF0080;}
+        A:visited {text-decoration:none;color:#FF0080;}
+        A:active {text-decoration:none;color:#FF0080;}
+        A:hover {text-decoration:underline;color:#FF0080;}
+    </style>
+</head>
+<body>
+	<h1>The Musical Beat</h1>
+	    <%= link_to "Create an account", new_user_path %> 
+		<%= link_to "Find music details", new_search_path %>
+	<p style="color: white">Created to complete your music information</p>
+</body>
+</html>

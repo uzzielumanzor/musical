@@ -1,0 +1,19 @@
+body{
+	position: absolute;
+        width:480px;
+        height:362px;
+        left: 450px;
+        top: 60px;
+        background-color: black;
+	background-image: url(dj.gif);
+        color: white;
+        font-family: Arial, "MS Trebuchet", sans-serif;
+        background-repeat: no-repeat;
+}
+h1{
+	padding: 40px 0px 0px 0px;
+        font-size: 250%;
+        font-family: 'Righteous';
+        color: white;
+}  
+<link href='http://fonts.googleapis.com/css?family=Butterfly+Kids|Righteous|Bangers' rel='stylesheet' type='text/css'>

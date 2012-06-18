@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>New Search</title>
+    <link rel="stylesheet" type="text/css" href="homeStyle.css">
+    <style type="text/css">
+        body{
+          background-color: black;
+          color: white;       
+        }
+        A:link {text-decoration:none;color:#FF0080;}
+        A:visited {text-decoration:none;color:#FF0080;}
+        A:active {text-decoration:none;color:#FF0080;}
+        A:hover {text-decoration:underline;color:#FF0080;}
+    </style>
+</head>
+<body>
+  <h1>New Search</h1>
+<%= form_for @search do |f| %>
+  <% if @search.errors.any? %>
+      <h2>Invalid search, the errors were:</h2>
+      <ul>
+          <% @search.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+      </ul>
+  <% end %>
+
+  <p>
+    <%= f.text_field :petition %>
+    by: <%=f.select :tipo, ['song','artist','album'] %>
+    <%= f.submit "search" %>
+  </p>
+
+<% end %>
+<%= link_to 'Home', root_path %>
+</body>
+</html>

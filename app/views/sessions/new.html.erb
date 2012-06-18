@@ -1,0 +1,31 @@
+<html>
+<head>
+	<title>Log in</title>
+	<style type="text/css">
+     body{
+     	background-color: black;
+      color: #FF0080;
+     }
+     A:link {text-decoration:none;color:#FF0080;}
+        A:visited {text-decoration:none;color:#FF0080;}
+        A:active {text-decoration:none;color:#FF0080;}
+        A:hover {text-decoration:underline;color:#FF0080;}
+	</style>
+</head>
+<body>
+	<%= form_tag sessions_path do %>
+  <div class="field">
+    <%= label_tag :email %>
+    <%= text_field_tag :email, params[:email] %>
+  </div>
+
+  <div class="field">
+    <%= label_tag :password %>
+    <%= password_field_tag :password %>
+  </div>
+
+  <div class="actions"><%= submit_tag "Log In" %></div>
+<% end %>
+<%= link_to 'Home', root_path %>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+ <head>
+ 	<title>Edit</title>
+    <link rel="stylesheet" type="text/css" href="homeStyle.css">
+    <style type="text/css">
+        body{
+        	background-color: black;
+        	color: white;
+        }
+        A:link {text-decoration:none;color:#FF0080;}
+        A:visited {text-decoration:none;color:#FF0080;}
+        A:active {text-decoration:none;color:#FF0080;}
+        A:hover {text-decoration:underline;color:#FF0080;}
+    </style>
+ </head>
+ <body link="white" vlink="white">
+ 	<h1>Editing user</h1>
+<%= render 'form' %>
+<%= link_to 'Show', @user %> |
+<%= link_to 'Home', root_path %>
+ </body>
+</html>

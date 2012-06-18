@@ -1,0 +1,35 @@
+<DOCTYPE html>
+<html>
+ <head>
+ 	<title>User</title>
+ 	 <link rel="stylesheet" type="text/css" href="homeStyle.css">
+    <style type="text/css">
+        body{
+        	background-color: black;
+        	color: white;
+        }
+        A:link {text-decoration:none;color:#FF0080;}
+        A:visited {text-decoration:none;color:#FF0080;}
+        A:active {text-decoration:none;color:#FF0080;}
+        A:hover {text-decoration:underline;color:#FF0080;}
+    </style>
+ </head>
+ <body link="white" vlink="white">
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Email:</b>
+  <%= @user.email %>
+</p>
+
+<p>
+  <b>Username:</b>
+  <%= @user.username %>
+</p>
+
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Home', root_path %>
+
+ </body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Musical</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body link="white" vlink="white">
+<% flash.each do |name, msg|%>
+  <div id = "flash_<%=name%>">
+    <%= msg%>
+  </div>
+<%end%>
+<% if  logged_in?%>
+  <p>logged_in as <%= current_user.email%></p>
+  <%= link_to "logged out", session_path(id:"current"), method: "delete"%>
+  <%= link_to "Your music list", "/searches/#index"%>
+<%else%>
+  <%= link_to "login", new_session_path%>
+<%end%>
+<%= yield %>
+
+</body>
+</html>

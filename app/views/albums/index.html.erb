@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Albums</title>
+    <link rel="stylesheet" type="text/css" href="homeStyle.css">
+    <style type="text/css">
+        body{
+        	background-color: black;
+          color: white;
+        }
+        A:link {text-decoration:none;color:#FF0080;}
+        A:visited {text-decoration:none;color:#FF0080;}
+        A:active {text-decoration:none;color:#FF0080;}
+        A:hover {text-decoration:underline;color:#FF0080;}
+    </style>
+</head>
+<body >
+	<h1>Albums</h1>
+<ol>
+  <% @album.each do |album|%>
+    <li>
+      <%= album.title_album %>
+      <%= album.art%>
+   </li>
+  <% end %>
+</ol>
+<%= link_to 'Home', root_path %>
+</body>
+</html>

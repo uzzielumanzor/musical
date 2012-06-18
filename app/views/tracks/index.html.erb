@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tracks List</title>
+    <link rel="stylesheet" type="text/css" href="homeStyle.css">
+    <style type="text/css">
+        body{
+          background-color: black;
+         color: white;
+        }
+    A:link {text-decoration:none;color:#FF0080;}
+        A:visited {text-decoration:none;color:#FF0080;}
+        A:active {text-decoration:none;color:#FF0080;}
+        A:hover {text-decoration:underline;color:#FF0080;}
+    </style>
+</head>
+<body>
+	<h1>Tracks List</h1>
+<ol>
+  <% @track.each do |track|%>
+    <li>
+      <%= track.title %>
+      <%= track.artist%>
+   </li>
+  <% end %>
+</ol>
+
+</body>
+<%= link_to 'Home', root_path %>
+</html>

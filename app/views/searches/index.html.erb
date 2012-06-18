@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Searches</title>
+    <link rel="stylesheet" type="text/css" href="homeStyle.css">
+    <style type="text/css">
+        body{
+        	background-color: black;
+      color: white;
+        }
+        A:link {text-decoration:none;color:#FF0080;}
+        A:visited {text-decoration:none;color:#FF0080;}
+        A:active {text-decoration:none;color:#FF0080;}
+        A:hover {text-decoration:underline;color:#FF0080;}
+    </style>
+</head>
+<body>
+	<h1>Searches</h1>
+<ol>
+  <% @search.each do |search|%>
+    <li>
+      <%= search.petition %>
+      <%= search.tipo %>
+       <%= link_to "delete", search, :method => :delete, :confirm => "are you sure?" %>
+   </li>
+  <% end %>
+</ol>
+<%= link_to 'Home', root_path %>
+</body>
+</html>
