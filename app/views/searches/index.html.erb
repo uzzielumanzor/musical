@@ -19,9 +19,8 @@
 <ol>
   <% @search.each do |search|%>
     <li>
-      <%= search.petition %>
-      <%= search.tipo %>
-       <%= link_to "delete", search, :method => :delete, :confirm => "are you sure?" %>
+      petition: <%= search.petition %>
+      Type: <%= search.tipo %>
    </li>
   <% end %>
 </ol>
