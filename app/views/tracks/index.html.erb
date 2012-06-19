@@ -19,8 +19,9 @@
 <ol>
   <% @track.each do |track|%>
     <li>
-      <%= track.title %>
-      <%= track.artist%>
+      Title: <%= track.title %>
+      Artist: <%= track.artist%>
+      Album: <%= track.album%>
    </li>
   <% end %>
 </ol>
